@@ -1,0 +1,1257 @@
+
+/* 1. CONFIGURAÇÕES GERAIS */
+:root {
+    --azul: #325491;
+    --azul-escuro: #263f69;
+    --azul-hover: #243e6b;
+    --dourado: #dcb55a;
+    --dourado-escuro: #d39c29;
+    --fundo: #f7f8fa;
+    --branco: #ffffff;
+    --texto: #333333;
+    --texto-suave: #737b89;
+    --borda: #d8deea;
+    --sombra: 0 3px 14px rgba(0, 0, 0, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: var(--azul);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--dourado-escuro);
+}
+
+/* 2. CABEÇALHO E NAVEGAÇÃO */
+.cabecalho,
+header {
+    background-color: var(--azul);
+    min-height: 85px;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.cabecalho .logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.cabecalho img,
+header img {
+    width: 180px;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.cabecalho nav,
+header nav,
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cabecalho nav a,
+header nav a,
+nav a {
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.cabecalho nav a:hover,
+header nav a:hover,
+nav a:hover {
+    color: var(--dourado);
+}
+
+#btn-sair {
+    background-color: var(--branco);
+    color: var(--azul);
+    border: 1px solid var(--branco);
+    border-radius: 7px;
+    padding: 8px 16px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+#btn-sair:hover {
+    background-color: var(--dourado);
+    border-color: var(--dourado);
+}
+
+/* 3. APRESENTAÇÃO / BANNER */
+.apresentacao {
+    padding: 60px 8%;
+    text-align: center;
+    background: linear-gradient(120deg, var(--azul), #496da8);
+    color: var(--branco);
+}
+
+.apresentacao h1 {
+    color: var(--branco);
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.apresentacao p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #edf1f8;
+    font-size: 16px;
+}
+
+.subtitulo {
+    display: block;
+    color: var(--dourado);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+/* 4. BOTÕES PADRÃO */
+.botao-principal {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 18px;
+    background-color: var(--azul);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.botao-principal:hover {
+    background-color: var(--dourado);
+    color: var(--branco);
+}
+
+.botao-link {
+    display: inline-block;
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 11px 18px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.botao-link:hover {
+    background-color: var(--azul-hover);
+    color: var(--branco);
+}
+
+/* 5. CAMPOS DE FORMULÁRIO */
+label {
+    display: block;
+    color: var(--azul-escuro);
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input,
+textarea,
+select {
+    max-width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(50, 84, 145, 0.12);
+}
+
+/* 6. LOGIN E CADASTRO */
+.login,
+.cadastro {
+    width: min(420px, calc(100% - 32px));
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--branco);
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+}
+
+.login img,
+.cadastro img {
+    width: 180px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.login h1,
+.cadastro h1 {
+    text-align: center;
+    color: var(--azul-escuro);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.login > p,
+.cadastro > p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 22px;
+}
+
+.login label,
+.cadastro label {
+    margin-top: 10px;
+}
+
+.login input,
+.cadastro input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background: var(--branco);
+}
+
+.login .botao-principal,
+.cadastro .botao-principal {
+    margin-top: 8px;
+}
+
+.login > p:last-child,
+.cadastro > p:last-child {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* 7. BUSCA */
+.busca {
+    width: 85%;
+    max-width: 1100px;
+    margin: 30px auto 55px;
+    padding: 30px;
+    background-color: var(--branco);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+
+.busca h2,
+.titulo-busca h2 {
+    color: var(--azul);
+    margin-bottom: 18px;
+}
+
+.titulo-busca {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.titulo-busca p {
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+.busca form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.busca input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 16px;
+    border: 1px solid var(--borda);
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.busca form button,
+.busca > button {
+    padding: 12px 25px;
+    background-color: var(--azul);
+    color: var(--branco);
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.busca form button:hover,
+.busca > button:hover {
+    background-color: var(--azul-hover);
+}
+
+/* 8. FILTROS */
+.filtros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.filtro {
+    padding: 9px 18px;
+    background-color: #f0f3f8;
+    color: #52617a;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.filtro:hover {
+    background-color: #e0e7f2;
+    color: var(--azul);
+}
+
+.filtro.ativo {
+    background-color: var(--azul);
+    color: var(--branco);
+    border-color: var(--azul);
+}
+
+/* 9. LISTAGEM E CARDS DE RECEITAS */
+.receitas {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto 70px;
+    padding: 20px 0 40px;
+}
+
+.receitas > h2,
+.titulo-receitas h2 {
+    color: var(--azul);
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.titulo-receitas {
+    margin-bottom: 28px;
+}
+
+.titulo-receitas p {
+    color: var(--texto-suave);
+    font-size: 15px;
+}
+
+.lista-receitas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+.card-receita {
+    min-width: 0;
+    background-color: var(--branco);
+    border: 1px solid #edf0f5;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-receita:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.card-receita img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+.conteudo-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.categoria {
+    align-self: flex-start;
+    background-color: #edf1f8;
+    color: var(--azul);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.card-receita h3 {
+    color: var(--azul);
+    font-size: 19px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.card-receita p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.info-receita {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 0;
+    border-top: 1px solid #edf0f5;
+    border-bottom: 1px solid #edf0f5;
+    margin-bottom: 12px;
+}
+
+.info-receita span {
+    color: #687386;
+    font-size: 12px;
+}
+
+.card-receita .autor {
+    color: #8992a0;
+    font-size: 12px;
+    margin: 8px 0 15px;
+}
+
+.autor strong {
+    color: var(--azul);
+}
+
+.card-receita a,
+.link-receita {
+    display: inline-block;
+    color: var(--azul);
+    font-weight: bold;
+    margin-top: auto;
+    padding-top: 12px;
+    transition: color 0.2s ease;
+}
+
+.card-receita a:hover,
+.link-receita:hover {
+    color: var(--dourado-escuro);
+}
+
+/* 10. MENSAGEM VAZIA E PAGINAÇÃO */
+.sem-receitas,
+.sem-dados {
+    text-align: center;
+    color: #8992a0;
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.oculto {
+    display: none !important;
+}
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 40px;
+}
+
+.pagina {
+    padding: 10px 16px;
+    background-color: var(--branco);
+    color: var(--azul);
+    border: 1px solid var(--borda);
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.pagina:hover:not(:disabled) {
+    background-color: #edf1f8;
+    border-color: var(--azul);
+}
+
+.pagina.ativo {
+    background-color: var(--azul);
+    color: var(--branco);
+    border-color: var(--azul);
+}
+
+.pagina:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* 11. FORMULÁRIO DE NOVA RECEITA */
+.formulario-receita {
+    width: min(800px, calc(100% - 32px));
+    margin: 45px auto;
+    padding: 35px;
+    background-color: var(--branco);
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+}
+
+.formulario-receita h1 {
+    text-align: center;
+    color: var(--azul);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.formulario-receita > p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.formulario-receita label {
+    margin: 12px 0 7px;
+}
+
+.formulario-receita input,
+.formulario-receita textarea,
+.formulario-receita select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    background-color: var(--branco);
+    font-size: 15px;
+}
+
+.formulario-receita textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.ingredientes,
+.preparo {
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid #dddddd;
+}
+
+.ingredientes h2,
+.preparo h2 {
+    color: var(--azul);
+    margin-bottom: 18px;
+}
+
+.ingrediente-form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ingrediente-form input {
+    flex: 1;
+    min-width: 180px;
+    margin-bottom: 0;
+}
+
+#adicionar-ingrediente,
+#adicionar-passo,
+.item-ingrediente button,
+.item-passo button {
+    padding: 10px 16px;
+    background-color: var(--azul);
+    color: var(--branco);
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+#adicionar-ingrediente:hover,
+#adicionar-passo:hover,
+.item-ingrediente button:hover,
+.item-passo button:hover {
+    background-color: var(--azul-hover);
+}
+
+#lista-ingredientes,
+#lista-passos {
+    margin-top: 18px;
+}
+
+.item-ingrediente,
+.item-passo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    background-color: #f3f5f9;
+    padding: 13px;
+    margin: 9px 0;
+    border-radius: 8px;
+}
+
+.item-passo {
+    border-left: 4px solid var(--dourado-escuro);
+}
+
+.passo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#lista-ingredientes button,
+#lista-passos button {
+    flex-shrink: 0;
+}
+
+.formulario-receita .botao-principal {
+    margin-top: 25px;
+    padding: 14px;
+}
+
+/* 12. PAINEL ADMINISTRATIVO */
+main:has(.resumo) {
+    width: 88%;
+    max-width: 1250px;
+    margin: 40px auto;
+}
+
+main:has(.resumo) .apresentacao {
+    padding: 0;
+    margin-bottom: 30px;
+    background: transparent;
+    color: var(--texto);
+    text-align: left;
+}
+
+main:has(.resumo) .apresentacao h1 {
+    color: var(--azul);
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+main:has(.resumo) .apresentacao p {
+    color: var(--texto-suave);
+    font-size: 15px;
+    margin: 0;
+}
+
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 35px;
+}
+
+.card-resumo {
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-left: 5px solid var(--azul);
+    box-shadow: var(--sombra);
+}
+
+.numero {
+    color: var(--azul);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.rotulo {
+    color: var(--texto-suave);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.painel {
+    background-color: var(--branco);
+    padding: 28px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: var(--sombra);
+}
+
+.painel-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.painel-topo h2 {
+    color: var(--azul);
+    font-size: 21px;
+}
+
+.filtro-admin {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.filtro-admin input,
+.filtro-admin select,
+.select-perfil {
+    padding: 10px 13px;
+    border: 1px solid var(--borda);
+    border-radius: 7px;
+    background-color: var(--branco);
+    color: #444;
+}
+
+.filtro-admin input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filtro-admin select {
+    min-width: 170px;
+}
+
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabela-admin {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+}
+
+.tabela-admin thead {
+    background-color: #edf1f8;
+}
+
+.tabela-admin th {
+    color: var(--azul);
+    font-size: 13px;
+    text-align: left;
+    padding: 15px;
+}
+
+.tabela-admin td {
+    padding: 15px;
+    font-size: 14px;
+    border-bottom: 1px solid #edf0f5;
+    color: #555e6d;
+}
+
+.tabela-admin tbody tr:hover {
+    background-color: #f7f9fc;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-publicada {
+    background-color: #e3f5e9;
+    color: #278447;
+}
+
+.status-pendente {
+    background-color: #fff2d8;
+    color: #a66b0c;
+}
+
+.acoes {
+    white-space: nowrap;
+}
+
+.acoes a {
+    color: var(--azul);
+    font-weight: bold;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.btn-tabela {
+    border: none;
+    border-radius: 5px;
+    padding: 7px 11px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.btn-aprovar {
+    background-color: #e3f5e9;
+    color: #278447;
+}
+
+.btn-excluir {
+    background-color: #fde8e8;
+    color: #c03939;
+}
+
+.select-perfil:focus,
+.filtro-admin input:focus,
+.filtro-admin select:focus {
+    border-color: var(--azul);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(50, 84, 145, 0.12);
+}
+
+/* 13. RODAPÉ */
+.rodape,
+footer {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 22px;
+    margin-top: 40px;
+    font-size: 13px;
+}
+
+.rodape p,
+footer p {
+    color: var(--branco);
+    margin: 0;
+}
+
+/* 14. RESPONSIVIDADE */
+@media (max-width: 950px) {
+    .lista-receitas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cabecalho,
+    header {
+        padding: 18px 4%;
+    }
+
+    main:has(.resumo) {
+        width: 94%;
+    }
+}
+
+@media (max-width: 700px) {
+    .cabecalho,
+    header {
+        flex-direction: column;
+        padding: 18px 20px;
+        gap: 15px;
+    }
+
+    .cabecalho nav,
+    header nav,
+    nav {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .busca {
+        width: 92%;
+        padding: 22px;
+    }
+
+    .busca form {
+        flex-direction: column;
+    }
+
+    .busca form button {
+        width: 100%;
+    }
+
+    .receitas {
+        width: 92%;
+    }
+
+    .lista-receitas {
+        grid-template-columns: 1fr;
+    }
+
+    .resumo {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .painel {
+        padding: 18px;
+    }
+
+    .painel-topo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .filtro-admin {
+        flex-direction: column;
+    }
+
+    .filtro-admin input,
+    .filtro-admin select {
+        width: 100%;
+    }
+
+    .apresentacao {
+        padding: 48px 6%;
+    }
+
+    .apresentacao h1 {
+        font-size: 29px;
+    }
+
+    .formulario-receita {
+        padding: 24px;
+    }
+
+    .login,
+    .cadastro {
+        margin: 30px auto;
+        padding: 24px;
+    }
+};
+
+
+/* =====================================
+   CONFIGURAÇÕES GERAIS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f8fa;
+    color: #263f69;
+    line-height: 1.6;
+}
+
+/* =====================================
+   CABEÇALHO
+===================================== */
+
+header {
+    background-color: #325491;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header img {
+    width: 65px;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #f4d58d;
+}
+
+/* =====================================
+   CONTEÚDO PRINCIPAL
+===================================== */
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 25px;
+}
+
+/* =====================================
+   APRESENTAÇÃO DA RECEITA
+===================================== */
+
+main > section:first-child {
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+h1 {
+    color: #325491;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+main > section:first-child img {
+    width: 100%;
+    max-width: 650px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+main > section:first-child p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    color: #555;
+    font-size: 17px;
+}
+
+/* =====================================
+   INFORMAÇÕES DA RECEITA
+===================================== */
+
+main > section:first-child ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+main > section:first-child ul li {
+    background-color: #f4d58d;
+    color: #263f69;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* =====================================
+   SEÇÕES DE INGREDIENTES E PREPARO
+===================================== */
+
+main > section:not(:first-child) {
+    background-color: white;
+    padding: 30px;
+    margin: 25px 0;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    color: #325491;
+    font-size: 25px;
+    margin-bottom: 20px;
+    border-left: 5px solid #d39c29;
+    padding-left: 12px;
+}
+
+h3 {
+    color: #263f69;
+    font-size: 19px;
+    margin: 25px 0 12px;
+}
+
+/* =====================================
+   LISTAS
+===================================== */
+
+ul,
+ol {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 12px;
+    color: #555;
+}
+
+ul li::marker {
+    color: #d39c29;
+}
+
+ol li::marker {
+    color: #325491;
+    font-weight: bold;
+}
+
+/* =====================================
+   LINHAS DIVISÓRIAS
+===================================== */
+
+hr {
+    border: none;
+    border-top: 2px solid #e5eaf2;
+    margin: 30px 0;
+}
+
+/* =====================================
+   LINK VOLTAR
+===================================== */
+
+main > a {
+    display: inline-block;
+    background-color: #325491;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    transition: background-color 0.3s;
+}
+
+main > a:hover {
+    background-color: #263f69;
+}
+
+/* =====================================
+   RODAPÉ
+===================================== */
+
+footer {
+    background-color: #263f69;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    main > section:first-child {
+        padding: 20px;
+    }
+
+    main > section:first-child img {
+        height: 230px;
+    }
+
+    main > section:first-child ul {
+        flex-direction: column;
+    }
+
+    main > section:first-child ul li {
+        width: 100%;
+    }
+
+    main > section:not(:first-child) {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    main > section:first-child img {
+        height: 190px;
+    }
+
+    main > section:not(:first-child) {
+        padding: 18px;
+    }
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="UDF na Cozinha">
+  <title>Ícone UDF na Cozinha</title>
+
+  <!-- Fundo -->
+  <rect width="200" height="200" rx="44" fill="#142A40"/>
+
+  <!-- Estrela (um traço só) -->
+  <g transform="translate(100 118) scale(0.9)">
+    <path d="M0 -92 L47 64 L-76 -25 L76 -25 L-47 64 L-4 -78"
+          fill="none" stroke="#29ABE2" stroke-width="12.5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Chapéu de chef -->
+  <g transform="translate(0 4)">
+    <path d="M76 64 L76 50 C58 48 56 22 78 20 C80 4 120 4 122 20 C144 22 142 48 124 50 L124 64 Z" fill="#FFFFFF"/>
+    <path d="M90 50 C89 40 91 32 93 26" fill="none" stroke="#142A40" stroke-width="2.5" stroke-linecap="round" opacity="0.35"/>
+    <path d="M110 50 C111 40 109 32 107 26" fill="none" stroke="#142A40" stroke-width="2.5" stroke-linecap="round" opacity="0.35"/>
+    <rect x="70" y="62" width="60" height="16" rx="4" fill="#D99A18"/>
+  </g>
+</svg>

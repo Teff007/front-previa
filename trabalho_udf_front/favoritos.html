@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos - UDF na Cozinha</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="favoritos.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="imagens/Logo UDF-Na-Cozinha.png" alt="Logo UDF na Cozinha">
+        </a>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="receitas.html">Receitas</a>
+
+            <a href="favoritos.html" data-visivel="logado">Meus favoritos</a>
+            <a href="nova-receita.html" data-visivel="autor admin">Nova receita</a>
+            <a href="admin.html" data-visivel="admin">Painel</a>
+
+            <button type="button" id="btn-sair" data-visivel="logado">Sair</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="apresentacao">
+            <h1>Meus favoritos</h1>
+            <p>Aqui ficam as receitas que você salvou para fazer depois.</p>
+        </section>
+
+        <section class="receitas">
+            <h2>Receitas favoritas</h2>
+
+            <div class="lista-receitas" id="lista-favoritos">
+
+                <article class="card-receita">
+                    <img src="imagens/macarrao-ao-molho.jpg" alt="Macarrão ao molho de tomate">
+
+                    <h3>Macarrão ao molho de tomate</h3>
+
+                    <p>Uma receita simples e saborosa para o dia a dia.</p>
+
+                    <p>Dificuldade: Fácil</p>
+
+                    <div class="acoes-card">
+                        <a href="receita-macarrao.html" class="link-receita">Ver receita</a>
+                        <button type="button" class="btn-remover-favorito" data-id="1">Remover</button>
+                    </div>
+                </article>
+
+                <article class="card-receita">
+                    <img src="imagens/frango-assado.jpg" alt="Frango assado">
+
+                    <h3>Frango assado</h3>
+
+                    <p>Uma opção prática para uma refeição completa.</p>
+
+                    <p>Dificuldade: Médio</p>
+
+                    <div class="acoes-card">
+                        <a href="receita.html?id=2">Ver receita</a>
+                        <button type="button" class="btn-remover-favorito" data-id="2">Remover</button>
+                    </div>
+                </article>
+
+                <article class="card-receita">
+                    <img src="imagens/bolo-de-chocolate.jpg" alt="Bolo de chocolate">
+
+                    <h3>Bolo de chocolate</h3>
+
+                    <p>Uma receita clássica para quem gosta de chocolate.</p>
+
+                    <p>Dificuldade: Fácil</p>
+
+                    <div class="acoes-card">
+                        <a href="receita-bolo.html" class="link-receita">Ver receita</a>
+                        <button type="button" class="btn-remover-favorito" data-id="3">Remover</button>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Mostrar quando não houver favoritos (o JavaScript tira o atributo "hidden") -->
+            <div class="sem-favoritos" id="sem-favoritos" hidden>
+                <p>Você ainda não tem receitas favoritas.</p>
+                <a href="receitas.html" class="botao-link">Explorar receitas</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 UDF na Cozinha - Sabor & Gastronomia</p>
+    </footer>
+
+</body>
+</html>

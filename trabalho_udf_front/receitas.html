@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="receitas.css">
+
+</head>
+<body>
+
+    <header>
+        <img src="imagens/Logo UDF-Na-Cozinha.png" alt="Logo UDF na Cozinha">
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="receitas.html">Receitas</a>
+
+            <a href="favoritos.html" data-visivel="logado">Meus favoritos</a>
+            <a href="nova-receita.html" data-visivel="autor admin">Nova receita</a>
+            <a href="admin.html" data-visivel="admin">Painel</a>
+
+            <button type="button" id="btn-sair" data-visivel="logado">Sair</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="apresentacao">
+            <h1>Receitas</h1>
+            <p>Veja as receitas compartilhadas pela nossa comunidade.</p>
+        </section>
+
+        <section class="busca">
+            <h2>Encontre uma receita</h2>
+            <form>
+                <input type="text" id="campo-busca" placeholder="Digite o nome de uma receita...">
+                <button type="submit">Buscar</button>
+            </form>
+
+            <div class="filtros">
+                <button type="button" class="filtro ativo">Todas</button>
+                <button type="button" class="filtro">Doces</button>
+                <button type="button" class="filtro">Salgados</button>
+                <button type="button" class="filtro">Massas</button>
+                <button type="button" class="filtro">Carnes</button>
+                <button type="button" class="filtro">Saladas</button>
+            </div>
+        </section>
+
+        <section class="receitas">
+            <h2>Todas as Receitas</h2>
+
+            <div class="lista-receitas" id="lista-receitas">
+
+                <article class="card-receita">
+                    <img src="imagens/macarrao-ao-molho.jpg" alt="Macarrão ao molho de tomate">
+                    <span class="categoria">Massas</span>
+                    <h3>Macarrão ao molho de tomate</h3>
+                    <p>Um clássico simples e rápido, perfeito para o almoço do dia a dia.</p>
+                    <div class="info-receita">
+                        <span>⏱ 30 min</span>
+                        <span>🍽 4 porções</span>
+                    </div>
+                    <p class="autor">Por <strong>Maria</strong></p>
+                   <a href="receita-macarrao.html" class="link-receita">Ver receita</a>
+                </article>
+
+                <article class="card-receita">
+                    <img src="imagens/frango-assado.jpg" alt="Frango assado">
+                    <span class="categoria">Carnes</span>
+                    <h3>Frango Assado</h3>
+                    <p>Frango suculento e dourado, temperado com ervas e alho.</p>
+                    <div class="info-receita">
+                        <span>⏱ 1h 20 min</span>
+                        <span>🍽 6 porções</span>
+                    </div>
+                    <p class="autor">Por <strong>João</strong></p>
+                    <a href="receita.html?id=2">Ver receita</a>
+                </article>
+
+                <article class="card-receita">
+                    <img src="imagens/bolo-de-chocolate.jpg" alt="Bolo de chocolate">
+                    <span class="categoria">Doces</span>
+                    <h3>Bolo de Chocolate</h3>
+                    <p>Bolo fofinho com cobertura cremosa, ideal para festas e lanches.</p>
+                    <div class="info-receita">
+                        <span>⏱ 50 min</span>
+                        <span>🍽 10 porções</span>
+                    </div>
+                    <p class="autor">Por <strong>Ana</strong></p>
+                    <a href="receita-bolo.html" class="link-receita">Ver receita</a>
+                </article>
+
+                <article class="card-receita">
+                    <img src="imagens/grao-de-bico.jpg" alt="Salada de grão-de-bico">
+                    <span class="categoria">Saladas</span>
+                    <h3>Salada de grão-de-bico</h3>
+                    <p>Refrescante, nutritiva e pronta em poucos minutos.</p>
+                    <div class="info-receita">
+                        <span>⏱ 15 min</span>
+                        <span>🍽 2 porções</span>
+                    </div>
+                    <p class="autor">Por <strong>Carlos</strong></p>
+                    <a href="receita.html?id=4">Ver receita</a>
+                </article>
+
+                <article class="card-receita">
+                    <img src="imagens/coxinha.jpg" alt="Coxinha de frango">
+                    <span class="categoria">Salgados</span>
+                    <h3>Coxinha de frango</h3>
+                    <p>Massa macia e recheio cremoso de frango desfiado.</p>
+                    <div class="info-receita">
+                        <span>⏱ 1h 30 min</span>
+                        <span>🍽 20 unidades</span>
+                    </div>
+                    <p class="autor">Por <strong>Paula</strong></p>
+                    <a href="receita.html?id=5">Ver receita</a>
+                </article>
+
+                <article class="card-receita">
+                    <img src="imagens/brigadeiro.jpg" alt="Brigadeiro">
+                    <span class="categoria">Doces</span>
+                    <h3>Brigadeiro</h3>
+                    <p>O doce favorito dos brasileiros, com poucos ingredientes.</p>
+                    <div class="info-receita">
+                        <span>⏱ 25 min</span>
+                        <span>🍽 30 unidades</span>
+                    </div>
+                    <p class="autor">Por <strong>Lucas</strong></p>
+                    <a href="receita.html?id=6">Ver receita</a>
+                </article>
+
+            </div>
+
+            <!-- Mostrar quando não houver receitas (remover a classe "oculto" via JS) -->
+            <p class="sem-receitas oculto" id="sem-receitas">
+                Nenhuma receita encontrada.
+            </p>
+
+            <div class="paginacao">
+                <button type="button" class="pagina" disabled>Anterior</button>
+                <button type="button" class="pagina ativo">1</button>
+                <button type="button" class="pagina">2</button>
+                <button type="button" class="pagina">3</button>
+                <button type="button" class="pagina">Próxima</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 UDF na Cozinha. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

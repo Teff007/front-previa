@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicione receitas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="nova-receita.css">
+</head>
+<body>
+
+    <header>
+        <img src="imagens/Logo UDF-Na-Cozinha.png" alt="Logo UDF na Cozinha">
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="receitas.html">Receitas</a>
+            <a href="favoritos.html" data-visivel="logado">Meus favoritos</a>
+            <a href="nova-receita.html" data-visivel="autor admin">Nova receita</a>
+            <a href="admin.html" data-visivel="admin">Painel</a>
+
+            <button type="button" id="btn-sair" data-visivel="logado">Sair</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <form class="formulario-receita" id="form-receita">
+            <h1>Adicione sua Receita</h1>
+            <p>Preencha os campos abaixo para compartilhar sua receita com a comunidade.</p>
+
+            <label for="titulo">Título da receita</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Ex: Bolo de chocolate" required>
+
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" name="descricao" placeholder="Conte um pouco sobre a sua receita..." required></textarea>
+
+            <div class="linha-campos">
+                <div>
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Selecione</option>
+                        <option value="doces">Doces</option>
+                        <option value="salgados">Salgados</option>
+                        <option value="massas">Massas</option>
+                        <option value="carnes">Carnes</option>
+                        <option value="saladas">Saladas</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="tempo">Tempo de Preparo (min)</label>
+                    <input type="number" id="tempo" name="tempo" min="1" placeholder="Ex: 40" required>
+                </div>
+
+                <div>
+                    <label for="porcoes">Porções</label>
+                    <input type="number" id="porcoes" name="porcoes" min="1" placeholder="Ex: 6" required>
+                </div>
+            </div>
+
+            <label for="imagem">Foto da Receita</label>
+            <input type="file" id="imagem" name="imagem" accept="image/*">
+            <small class="dica">Formatos aceitos: JPG, PNG ou WEBP.</small>
+
+            
+            <section class="ingredientes">
+                <h2>Ingredientes</h2>
+
+                <div class="ingrediente-form">
+                    <input type="text" id="quantidade-ingrediente" placeholder="Quantidade (Ex: 2 xícaras)">
+                    <input type="text" id="nome-ingrediente" placeholder="Ingrediente (Ex: Farinha de trigo)">
+                    <button type="button" id="adicionar-ingrediente">Adicionar</button>
+                </div>
+
+                <div id="lista-ingredientes">
+                </div>
+            </section>
+            <section class="preparo">
+                <h2>Modo de preparo</h2>
+
+                <div class="passo-form">
+                    <textarea id="texto-passo" placeholder="Descreva o passo (Ex: Misture os ingredientes secos...)"></textarea>
+                    <button type="button" id="adicionar-passo">Adicionar passo</button>
+                </div>
+
+                <div id="lista-passos">
+                  
+                </div>
+            </section>
+
+            <button type="submit" class="botao-principal">Publicar receita</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 UDF na Cozinha. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
